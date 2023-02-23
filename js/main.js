@@ -15,4 +15,49 @@ $('document').ready(function () {
   $('#cep').mask('00000-000', {
     placeholder: '00000-000',
   });
+
+  // JQUERY VALIDATE
+  $('form').validate({
+    rules: {
+      nome: {
+        required: true,
+      },
+      telefone: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      cpf: {
+        required: true,
+      },
+      endereco: {
+        required: true,
+      },
+      cep: {
+        required: true,
+      },
+    },
+    messages: {
+      nome: {
+        required: 'Por favor, insira seu nome',
+      },
+      telefone: {
+        required: 'Por favor, insira seu telefone',
+      },
+      email: {
+        required: 'Este campo é obrigatório',
+      },
+      cpf: {
+        required: 'Este campo é obrigatório',
+      },
+      endereco: {
+        required: 'Este campo é obrigatório',
+      },
+      cep: {
+        required: 'Este campo é obrigatório',
+      },
+    },
+  });
 });
